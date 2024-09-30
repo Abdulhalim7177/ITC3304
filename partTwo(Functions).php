@@ -83,10 +83,67 @@ echo "Using calculatePower function to find the exponent of 2 power 5 = ". calcu
 function stringReverse($string){
     $reverseString='';
     $stringLength = strlen($string);
-    for($i = $stringLength; $i >=0 ; $i --){
+    for($i = $stringLength -1; $i >=0 ; $i --){
         $reverseString .= $string[$i];
     } return $reverseString;
  
 }
 
-echo stringReverse("Hello World");
+echo stringReverse("Hello World") . "<br>";
+//7. a PHP function called calculate that takes two numbers and an operator (+, -, *, /) as arguments and returns the result of the operation
+
+function opera($Num1, $Num2, $operator){
+    if($operator == '+'){
+        $operations = $Num1 + $Num2;
+    } elseif($operator == '-'){
+        $operations = $Num1 - $Num2;
+    }elseif($operator == '/'){
+        $operations = $Num1 / $Num2;
+    }
+    elseif($operator == '*'){
+        $operations = $Num1 * $Num2;
+    }
+
+    return $operations;
+}
+
+echo "the operarions carried on 3 and 10: ". opera(3,10,'+')."<br>";
+
+
+//8. a PHP function that converts temperature from Celsius to Fahrenheit  Fahrenheit = (Celsius * 9/5) + 32.
+
+function tempConvert($tempreture){
+    return ($tempreture * (9/5)) + 32;
+    
+}
+echo "the converted tempreture from celcius to fahrenheit is: " .tempConvert(40) . "<br>";
+
+//9. a PHP function that generates an email address using a person's name and a domain. Display the generated email
+
+function emailGen($name, $domain){
+    return $name .'@'. $domain;
+}
+
+echo "the email generated is: ". emailGen("ahmad","swe.com") ."<br>";
+
+//10. Imagine you have a PHP script that calculates the total cost of items in a shopping cart. How would you handle passing the item prices and quantities to the script and return the calculated total?
+// to handle such you are to use and associative array and link the prices of each item with the quantity of the item
+
+function calculateTotal($ShoppingItems){
+    $totalCost =0;
+    foreach ($ShoppingItems as $items => $itemInfo) {
+        $price = $itemInfo['price'];
+        $quantity = $itemInfo['quantity'];
+
+        $totalCost += $price * $quantity;
+    }
+    return $totalCost;
+
+}
+// example to illustrate
+$ItemsDemo = [
+    "Pencil" => ["price" => 20, "quantity" => 3],
+    "Biro" => ["price" => 50, "quantity" => 3],
+    "Book" => ["price" => 250, "quantity" => 2]
+];
+echo "The total cost of items in the shopping cart is: " . calculateTotal($ItemsDemo) ; 
