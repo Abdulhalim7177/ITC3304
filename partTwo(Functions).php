@@ -147,3 +147,19 @@ $ItemsDemo = [
     "Book" => ["price" => 250, "quantity" => 2]
 ];
 echo "The total cost of items in the shopping cart is: " . calculateTotal($ItemsDemo) ; 
+
+/*11. 11. Write a PHP function to calculate;
+a. (a+b) power 2
+b. (a+b) power 3
+c. (a2-b2) 
+*/
+
+function FirstFuntion($a, $b){
+    return ($a + $b)**2;    
+}
+function SecondFunction($a, $b){
+    return ($a + $b) ** 3;
+}
+function ThirdFunction($a, $b){
+    return (($a**2) - ($b**2));
+}
