@@ -6,16 +6,14 @@
     <title>User Input Form</title>  
 </head>  
 <body>  
-
 <form method="post" action="taskTwo.php">  
-    First Number 
+    <label>First Number </label>
     <input type="number"name="firstNum" required>  
     <br>  
-    Second Number 
+    <label>Second Number </label>
     <input type="number"name="secondNum" required>  
     <br>  
     <input type="submit" value="Submit">  
 </form>  
-
 </body>  
 </html>
