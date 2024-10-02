@@ -126,7 +126,8 @@ function emailGen($name, $domain){
 
 echo "the email generated is: ". emailGen("ahmad","swe.com") ."<br>";
 
-//10. Imagine you have a PHP script that calculates the total cost of items in a shopping cart. How would you handle passing the item prices and quantities to the script and return the calculated total?
+//10. Imagine you have a PHP script that calculates the total cost of items in a shopping cart.
+// How would you handle passing the item prices and quantities to the script and return the calculated total?
 // to handle such you are to use and associative array and link the prices of each item with the quantity of the item
 
 function calculateTotal($ShoppingItems){
