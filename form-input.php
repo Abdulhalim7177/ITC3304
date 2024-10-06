@@ -6,7 +6,7 @@
     <title>User Input Form</title>  
 </head>  
 <body>  
-<form method="post" action="taskTwo.php">  
+<form method="post" action="partTwo(Functions).php">  
     <label>First Number </label>
     <input type="number"name="firstNum" required>  
     <br>  
